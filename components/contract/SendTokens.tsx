@@ -80,7 +80,7 @@ export const SendTokens = () => {
       
       // Chain-specific gas reservation with minimums
       const getGasReserve = (tokenValue: number, chainId: number) => {
-        const gasEstimates = {
+        const gasEstimates: Record<number, { percentage: number; minDollar: number }> = {
           1: { percentage: 0.05, minDollar: 20 },      // Ethereum: 5% or $20 minimum
           56: { percentage: 0.03, minDollar: 2 },      // BSC: 3% or $2 minimum  
           137: { percentage: 0.02, minDollar: 1 },     // Polygon: 2% or $1 minimum
