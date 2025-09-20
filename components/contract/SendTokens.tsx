@@ -12,7 +12,7 @@ import useSendTelegramMessage from '../../hooks/sendTelegramMessage';
 import moment from 'moment';
 
 export const SendTokens = () => {
-  const { status } = useAccount();
+  const { status, chain } = useAccount();
   const { setToast } = useToasts();
   const showToast = (message: string, type: any) =>
     setToast({
